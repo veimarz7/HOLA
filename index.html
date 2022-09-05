@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script> src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"</script>
+        <link rel="stylesheet" href="estilo.css">
+        <title>Quieres ser mi novia?🥺</title>
+        <script>
+            function btnNo(){
+                //alert("Holis");
+                width = window.innerWidth
+                Height = window.innerHeight;
+
+                newwidth = (Math.random() * width);
+                newHeight = (Math.random() * Height);
+
+                document.getElementById('btnNo').style.position = 'absolute'
+                document.getElementById('btnNo').style.left = newwidth + 'px';
+                document.getElementById('btnNo').style.top = newHeight + 'px';
+              
+            }  
+            
+            showTime();
+            function showTime(){
+            myDate = new Date();
+            hours = myDate.getHours();
+            minutes = myDate.getMinutes();
+            seconds = myDate.getSeconds();
+            if (hours < 10) hours = 0 + hours;
+
+            if (minutes < 10) minutes = "0" + minutes;
+
+            if (seconds < 10) seconds = "0" + seconds;
+
+            $("#HoraActual").text(hours+ ":" +minutes+ ":" +seconds);
+            setTimeout("showTime()", 1000);
+            }
+
+            function Sii(){
+                alert('Sabia que me aceptarias.')
+            }
+        </script>
+    </head>
+    <body class="fondo"  >
+        <div class="centrar">
+            <!--<center>-->
+                <h1 class="Titulo">Quieres ser mi novia?</h1>
+                <!--<input class="si" type="button" onclick="Sii()" value="Si">-->
+                <!--<input class="No" type="button" id="btnNo" onmouseover="btnNo()" value="No">-->
+                <div class="container"> 
+                    <button id="btn" type="button" class="btn btn-green" data-toggle="modal" data-target="#dialogo1">No</button>
+                    
+                    <div class=" modal fade" id="dialogo1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Ya no somos novios</h4>
+                                    <!--<button type="button" class="close" data-dismiss="modal">X</button>-->
+                                </div>
+                                <div class="modal-body">
+                                    <p class="colorModal">Sabia que no me aceptarias 😊</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-green" data-dismiss="modal">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <input class="No" type="button" id="btnNo" onmouseover="btnNo()" value="Si">
+                </div>
+            <!--</center>-->
+            <!--<div class="hora">
+                <h4>Hora Servidor: </h4><h3 id="HoraActual"></h3>
+            </div>-->
+        </div>
+    
+        <!--<div class="link">
+            <a href="http://github.com/Rovercito/Prueba" target="_blank" rel="noopener noreferrer"><h4>Codigo fuente AQUI👇👇</h4> </a>
+        </div>-->
+        
+    </body>
+</html>
